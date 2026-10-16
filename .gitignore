@@ -1,0 +1,53 @@
+# Output directories
+formatted/
+GWAS_output/
+IMPUTED/pgen/
+
+# Data files (too large for git)
+*.bed
+*.bim
+*.fam
+*.pgen
+*.pvar
+*.psam
+*.vcf
+*.vcf.gz
+*.vcf.gz.tbi
+*.eigenvec
+
+# Pipeline output
+*.log
+*.out.gz
+*.meta.gz
+
+# User data
+Covariates.csv
+combinedROItable_*.csv
+Phenotypes.csv
+
+# Conda environment
+enigma_dti_gwas/
+
+# R artifacts
+.Rhistory
+.RData
+.Rproj.user/
+
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Zip archives
+*.zip

@@ -1,0 +1,39 @@
+name: enigma_dti_gwas
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  # R and base packages
+  - r-base>=4.1
+  - r-essentials
+
+  # Python
+  - python>=3.9
+  - pandas
+  - numpy<2.0   # eDTI_outliers uses numpy int types with str.join(); numpy 2.0 broke that
+  - openpyxl
+
+  # Bioinformatics tools
+  # NOTE: plink2 is installed as a direct binary download (see setup_environment.sh)
+  #       because bioconda's version numbering differs from upstream releases.
+  - bcftools
+  - samtools
+  - htslib
+  - tabix
+
+  # vcftools is installed separately to avoid perl dependency conflicts.
+  # It is optional -- the pipeline does not critically depend on it.
+  # Uncomment below if your solver can handle it:
+  # - vcftools
+
+  # System tools
+  - git
+  - wget
+  - unzip
+
+  # pip packages
+  - pip
+  - pip:
+    - xlsxwriter
+    - eDTI_outliers @ git+https://github.com/lizhaddad/eDTI_additional_QC.git
