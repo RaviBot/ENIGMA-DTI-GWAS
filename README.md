@@ -61,7 +61,7 @@ The `setup_environment.sh` script creates a conda environment with all dependenc
 
 ```bash
 # Clone the repository
-git clone https://github.com/ravibot93/ENIGMA-DTI-GWAS.git SCRIPTS
+git clone https://github.com/RaviBot/ENIGMA-DTI-GWAS.git SCRIPTS
 cd SCRIPTS
 
 # Run the setup script
